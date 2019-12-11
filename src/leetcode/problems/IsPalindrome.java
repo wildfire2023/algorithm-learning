@@ -1,6 +1,6 @@
 package leetcode.problems;
 
-public class 回文数 {
+public class IsPalindrome {
 
 	/**
 	 * 判断一个数是否是回文数

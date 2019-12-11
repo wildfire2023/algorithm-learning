@@ -1,7 +1,7 @@
 package leetcode.problems;
 
 
-public class 整数反转 {
+public class Reverse {
 
 	/**
 	 * 给出一个32位的有符号整数，将这个数字进行反转
