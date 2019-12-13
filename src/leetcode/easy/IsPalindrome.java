@@ -1,4 +1,4 @@
-package leetcode.problems;
+package leetcode.easy;
 
 public class IsPalindrome {
 
