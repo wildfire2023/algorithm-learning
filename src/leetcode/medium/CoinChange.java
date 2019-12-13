@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 零钱兑换
  */
-public class CoinCharge {
+public class CoinChange {
 
 
     /**
