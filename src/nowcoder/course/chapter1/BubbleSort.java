@@ -3,19 +3,18 @@ package nowcoder.course.chapter1;
 import nowcoder.course.Common;
 
 import java.util.Arrays;
+import java.util.concurrent.ForkJoinPool;
 
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int testTime = 500000;
-        int size = 100;
-        int value = 100;
-        boolean succeed = true;
-        for (int i = 0; i < testTime; i++) {
-            int[] arr1 = generateRandomArray(size, value);
-        }
+        bubbleSort1(new int[]{6, 8, 2, 4, 10, 4, 3, 2, 9, 12});
     }
 
+    /**
+     * 冒泡排序
+     * @param arr
+     */
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
@@ -24,6 +23,23 @@ public class BubbleSort {
             for (int i = 0; i < j; i++) {
                 if (arr[i] > arr[i + 1]) Common.swap(arr, i, i + 1);
             }
+        }
+    }
+
+    public static void bubbleSort1(int[] arr) {
+        // 参数校验
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        //  6,8,2,4,10
+        // 冒泡规则: N个数, 比较N - 1轮, 每一轮选出最大的数
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                }
+            }
+            System.out.println(Arrays.toString(arr));
         }
     }
 
