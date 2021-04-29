@@ -37,6 +37,18 @@ public class QuickSort {
         return less;
     }
 
+    public static int partition3(int[] arr, int L, int R) {
+        int lessEqual = L - 1;
+        for (int i = L; i < R;) {
+            if (arr[i] <= arr[R]) {
+                Common.swap(arr, i++, ++lessEqual);
+            } else {
+                Common.swap(arr, i, --R);
+            }
+        }
+        return lessEqual;
+    }
+
     /**
      * 小于区  等于区  大于区
      * less)5 3 2 1 6 9 8 (4
@@ -84,7 +96,8 @@ public class QuickSort {
         int[] arr = {5, 3, 2, 1, 6, 9, 8, 4};
 //        int index = partition1(arr, 0, arr.length - 1);
 //        System.out.println(index);
-        quickSort1(arr);
+//        quickSort1(arr);
+        partition3(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
 
     }
