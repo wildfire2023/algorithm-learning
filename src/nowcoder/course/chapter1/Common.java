@@ -1,6 +1,8 @@
-package nowcoder.course;
+package nowcoder.course.chapter1;
 
-public final class Common {
+public class Common {
+
+
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];

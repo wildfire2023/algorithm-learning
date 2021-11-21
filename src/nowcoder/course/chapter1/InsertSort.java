@@ -1,7 +1,5 @@
 package nowcoder.course.chapter1;
 
-import nowcoder.course.Common;
-
 import java.util.Arrays;
 
 public class InsertSort {

@@ -1,10 +1,24 @@
 package nowcoder.course.chapter1;
 
-import nowcoder.course.Common;
 
 import java.util.Arrays;
 
 public class SelectSort {
+
+    public void selectSortNew(int[] array) {
+        if (array == null || array.length == 0) {
+            return;
+        }
+        for (int i = 0; i < array.length - 1; i++) {
+            // 一轮选择出一个最小的值
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < min) min = j;
+            }
+            Common.swap(array, i, min);
+        }
+    }
+
 
     /**
      * 选择排序

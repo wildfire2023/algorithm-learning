@@ -1,6 +1,6 @@
 package leetcode.easy;
 
-import java.sql.SQLOutput;
+
 
 public class StrStr {
 
@@ -22,8 +22,4 @@ public class StrStr {
         return posj == needleC.length ? pos - posj : -1;
     }
 
-
-    public static void main(String[] args) {
-        System.out.println(strStr("hello", "lo"));
-    }
 }

@@ -1,15 +1,32 @@
 package nowcoder.course.chapter1;
 
-import nowcoder.course.Common;
 
 import java.util.Arrays;
-import java.util.concurrent.ForkJoinPool;
 
 public class BubbleSort {
 
     public static void main(String[] args) {
-        bubbleSort1(new int[]{6, 8, 2, 4, 10, 4, 3, 2, 9, 12});
+        int[] arr = {6, 8, 2, 4, 10, 4, 3, 2, 9, 12};
+        bubbleSortNew(arr);
+        System.out.println(arr);
     }
+
+
+    /**
+     * 冒泡排序复述
+     * @param arr
+     */
+    public static void bubbleSortNew(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[i]) Common.swap(arr, i, j);
+            }
+        }
+    }
+
 
     /**
      * 冒泡排序
