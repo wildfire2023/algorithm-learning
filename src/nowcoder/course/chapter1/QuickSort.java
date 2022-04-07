@@ -80,6 +80,12 @@ public class QuickSort {
         quickSort1Recur(arr, 0, arr.length - 1);
     }
 
+    /**
+     * 快排：划分函数+递归整体复杂度nlog(n)
+     * @param arr
+     * @param L
+     * @param R
+     */
     public static void quickSort1Recur(int[] arr, int L, int R) {
         if (L >= R) return;
         int[] equal = partition2(arr, L, R);

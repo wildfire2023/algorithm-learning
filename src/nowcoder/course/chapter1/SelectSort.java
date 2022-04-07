@@ -4,7 +4,6 @@ package nowcoder.course.chapter1;
 import java.util.Arrays;
 
 public class SelectSort {
-
     public void selectSortNew(int[] array) {
         if (array == null || array.length == 0) {
             return;
@@ -22,6 +21,7 @@ public class SelectSort {
 
     /**
      * 选择排序
+     *
      * @param arr
      */
     public static void selectionSort(int[] arr) {
@@ -45,7 +45,7 @@ public class SelectSort {
         }
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
-            for (int j = i + 1; j < arr.length; j ++ ){
+            for (int j = i + 1; j < arr.length; j++) {
                 minIndex = arr[j] < arr[minIndex] ? j : minIndex;
             }
             Common.swap(arr, i, minIndex);
