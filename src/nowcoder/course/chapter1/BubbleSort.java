@@ -14,6 +14,7 @@ public class BubbleSort {
 
     /**
      * 冒泡排序复述
+     *
      * @param arr
      */
     public static void bubbleSortNew(int[] arr) {
@@ -30,6 +31,7 @@ public class BubbleSort {
 
     /**
      * 冒泡排序
+     *
      * @param arr
      */
     public static void bubbleSort(int[] arr) {
