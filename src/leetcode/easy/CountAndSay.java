@@ -43,6 +43,43 @@ public class CountAndSay {
     }
 
 
+    /**
+     * 使用递归
+     *
+     * @param n
+     * @return
+     */
+    public static String countAndSay2(int n) {
+        if (n == 1) {
+            return "1";
+        }
+
+        // 获取上一项的外观字符串
+        String s1 = countAndSay2(n - 1);
+        StringBuilder sb = new StringBuilder();
+
+        // 计数器
+        int count = 0;
+        char lastChar = s1.charAt(0);
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) == lastChar) { // 计算同一个数字出现的次数
+                count++;
+            } else {
+                // 记录
+                sb.append(count);
+                sb.append(lastChar);
+                count = 1;
+                lastChar = s1.charAt(i);
+            }
+        }
+        sb.append(count);
+        sb.append(lastChar);
+        return sb.toString();
+
+
+    }
+
+
     public static void main(String[] args) {
         System.out.println(countAndSay(30));
     }
