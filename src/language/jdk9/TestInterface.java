@@ -1,4 +1,4 @@
-package huawei;
+package language.jdk9;
 
 public interface TestInterface {
     private String test() {
